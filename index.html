@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -8,17 +9,32 @@
     <p>Calculate your total meal cost</p>
 
     <h2>What is the zip code you're in?</h1>
+      <form>
+        zip code:<br>
+        <input type="text" name="zip code">
+
+      </form>
 
     <h2>Total meal cost (excluding tax)</h2>
     <p>Represent the number in the following way 108.34</p>
+      <form>
+          Total meal cost ex tax:<br>
+          <input type="text" name="meal cost ex tax">
+
+        </form>
 
     <h2>Tax based on your location</h2>
     <p>The is the tax based on the zip code your have given</p>
 
     <h2>How friendly do you want to be with your tip?</h2>
     <p>Choose one of the following</p>
-
+      <form action="/action_page.php">
+        <input type="submit" name="tip" value="15%"><br>
+        <input type="submit" name="tip" value="20%"><br>
+        <input type="submit" name="tip" value="25%">
+      </form>
     <h2>Your total, including tax and tip</h2>
+
 
    </body>
 </html>
