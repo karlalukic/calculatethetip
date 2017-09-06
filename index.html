@@ -11,7 +11,7 @@
     <h2>What is the zip code you're in?</h1>
       <form>
         zip code:<br>
-        <input type="text" name="zip code">
+        <input type="text" name="zipcode" id="zipcode">
 
       </form>
 
@@ -19,7 +19,7 @@
     <p>Represent the number in the following way 108.34</p>
       <form>
           Total meal cost ex tax:<br>
-          <input type="text" name="meal cost ex tax">
+          <input type="text" name="mealcostextax">
 
         </form>
 
@@ -37,6 +37,18 @@
       
     <h2>Your total, including tax and tip</h2>
 
-
+    <script>
+      var zipcodeInput = document.querySelector('#zipcode');
+      zipcodeInput.addEventListener('keydown', function(event) {
+        var zipcode = event.target.value;
+        if (Number(zipcode) && zipcode.length === 5 && isEven(zipcode)) {
+          alert('is Even');
+        }
+      }, false);
+      
+      function isEven(zipcode) {
+        return !(zipcode % 2);
+      }
+    </script>
    </body>
 </html>
